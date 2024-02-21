@@ -10,6 +10,8 @@ build-job:
     - npm run build # Build the application
 
 test-job:
+  image: "node:lts"
   stage: test
   script:
-    - echo "This job tests something"
+    - npm ci # Install the npm dependencies
+    - npm run test # Test the application
