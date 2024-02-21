@@ -8,6 +8,9 @@ build-job:
   script:
     - npm ci # Install the npm dependencies
     - npm run build # Build the application
+  artifacts:
+    paths:
+    - build/
 
 test-job:
   image: "node:lts"
